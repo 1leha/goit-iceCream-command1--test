@@ -1,0 +1,6 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: var(--primary-font);
+  @include font(16, 28, 500, 0.04);
+}

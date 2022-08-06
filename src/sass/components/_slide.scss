@@ -1,0 +1,52 @@
+.slide {
+  @include flex();
+  flex-direction: column;
+}
+
+.slide__img {
+  margin-bottom: 16px;
+}
+
+.slide__testimonials {
+  position: relative;
+
+  max-width: 1034px;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 106px;
+  padding-right: 106px;
+
+  margin-bottom: 36px;
+
+  background: #fafafa;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    // background-color: #e5e5e5;
+    background-image: url('../images/sprite/three-dots.svg');
+  }
+}
+
+.slide__text {
+  position: relative;
+  @include testomonials(16, 30, 500, 0.04);
+  z-index: 1;
+  text-align: center;
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.slide__person {
+  margin-top: 0;
+  margin-bottom: 32px;
+
+  @include font(20, 37, 500, 0.04);
+}

@@ -1,0 +1,14 @@
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  background-color: aqua;
+  color: brown;
+
+  @include projTransitions('color, background-color');
+
+  &:hover {
+    background-color: antiquewhite;
+    color: darkblue;
+  }
+}

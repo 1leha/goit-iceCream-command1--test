@@ -1,0 +1,108 @@
+// Миксин Flex. Параметры:
+// $type: тип флекс контейнера flex или inline-flex (по умолчанию flex)
+// $align: выравнивание вдоль поперечной оси cross axis (по умолчанию center)
+// $justify: выравнивание вдоль главной оси main axis  (по умолчанию center)
+@mixin flex($type: flex, $align: center, $justify: center) {
+  display: $type;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Миксин Transitions.
+// Необходимо указать свойство к которому применяется анимация.
+// Если свойств несколько то делаем так:
+// 1. @include projTransitions('color, background-color')
+// 2. @include projTransitions((color, background-color))
+@mixin projTransitions($property) {
+  transition-property: $property;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+
+// Миксин Font. Принимает значения fontSize, lineHeight, fontWeight, letterSpacing.
+// line-height расчитывается как относительная величина lineHeight/fontSize
+@mixin font(
+  $fontSize: 16,
+  $lineHeight: 29,
+  $fontWeight: 500,
+  $letterSpacing: 0.04
+) {
+  font-size: #{$fontSize}px;
+  line-height: calc(#{$lineHeight} / #{$fontSize});
+  font-weight: $fontWeight;
+  letter-spacing: #{$letterSpacing}em;
+}
+
+// Миксин Testomonials. Принимает значения fontSize, lineHeight, fontWeight, letterSpacing.
+// line-height расчитывается как относительная величина lineHeight/fontSize
+@mixin testomonials(
+  $fontSize: 16,
+  $lineHeight: 29,
+  $fontWeight: 500,
+  $letterSpacing: 0.04
+) {
+  font-size: #{$fontSize}px;
+  line-height: calc(#{$lineHeight} / #{$fontSize});
+  font-weight: $fontWeight;
+  letter-spacing: #{$letterSpacing}em;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    z-index: -1;
+    width: 54px;
+    height: 40px;
+
+    bottom: calc(100% - #{$lineHeight}px + 4px);
+    left: 0;
+
+    // background-color: #e1e1e1;
+
+    background-image: url('../images/sprite/comma-comma.svg');
+  }
+
+  background-image: repeating-linear-gradient(
+    to top,
+    #e1e1e1 1px,
+    transparent 2px,
+    transparent calc(#{$lineHeight}px + 1px) /* Опеределяет размер градиента */
+  );
+}
+
+// Миксин устанавливает медиаправило для мобильной версии
+@mixin mobile {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+// Миксин устанавливает медиаправило для планшета
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// Миксин устанавливает медиаправило для десктопа
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Миксин устанавливает медиаправило для удвоенной плотности пикселей фоновых изображений.
+// В контенте прописывается ссылка на фоновую картинку с удвоенной плотностью пикселей
+// Пример:
+//?   @include pixelRatio {
+//?     background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+//?       url('../img/hero-bg-mobile@2x.jpg');
+//?   }
+@mixin pixelRatio {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
