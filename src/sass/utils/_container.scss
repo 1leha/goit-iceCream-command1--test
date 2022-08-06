@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+//   width: 100vw;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 0 auto;
+
+  @include mobile {
+    min-width: 320px;
+  }
+
+  @include tablet {
+    min-width: 768px;
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @include desktop {
+    min-width: 1280px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

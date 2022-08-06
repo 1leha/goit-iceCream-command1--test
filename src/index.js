@@ -1,1 +1,2 @@
-import './js/customerReviewsSlider';
+// import './js/customerReviewsSlider';
+import './js/masonryLayoutGallery';
