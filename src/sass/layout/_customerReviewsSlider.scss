@@ -1,8 +1,4 @@
 .splide__pagination {
-  /* !удалить */
-  //   outline: 1px solid tomato;
-  //   background-color: peachpuff;
-  //   transform: translateY(1.5em);
   bottom: 0em;
 }
 
@@ -23,12 +19,13 @@
   border: none;
 
   background-color: #d9d9d9;
-  background-image: linear-gradient(to bottom, #d9d9d9, #d9d9d9),
-    url('../images/sprite/active-pagination.svg');
 
   &.is-active {
+    border-radius: 0;
+
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent, transparent),
-      url('../images/sprite/active-pagination.svg');
+    background-image: url('../images/svg/customer-reviews/active-pagination.svg');
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

@@ -4,20 +4,44 @@
 }
 
 .slide__img {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 20;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
+  }
 }
 
 .slide__testimonials {
   position: relative;
 
-  max-width: 1034px;
+  min-width: 180px;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
-  padding-left: 106px;
-  padding-right: 106px;
+  padding-top: 43px;
+  padding-bottom: 17px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   margin-bottom: 36px;
+
+  @include mobile {
+    max-width: 280px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include tablet {
+    max-width: 640;
+    padding-top: 38px;
+    padding-bottom: 36px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 24px;
+  }
 
   background: #fafafa;
 
@@ -31,22 +55,83 @@
     transform: translateX(-50%);
 
     // background-color: #e5e5e5;
-    background-image: url('../images/sprite/three-dots.svg');
+    background-image: url('../images/svg/customer-reviews/three-dots.svg');
+  }
+
+  @include tablet {
+    &::after {
+      top: calc(100% + 4px);
+    }
+  }
+
+  @include desktop {
+    max-width: 1034px;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 106px;
+    padding-right: 106px;
+
+    &::after {
+      top: calc(100% + 16px);
+    }
   }
 }
 
 .slide__text {
   position: relative;
-  @include testomonials(16, 30, 500, 0.04);
   z-index: 1;
+
+  @include testomonials(12, 30.6, 500, 0.04);
   text-align: center;
-  padding-left: 36px;
-  padding-right: 36px;
+  margin: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 8px;
+  }
+
+  @include tablet {
+    @include testomonials(14, 30, 500, 0.04);
+    &::after {
+      transform: translateY(-4px);
+    }
+
+    padding-left: 44px;
+    padding-right: 49px;
+  }
+
+  @include desktop {
+    @include testomonials(16, 30, 500, 0.04);
+
+    padding-left: 36px;
+    padding-right: 36px;
+
+    &::after {
+      transform: translateY(4px);
+    }
+  }
 }
 
 .slide__person {
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 
-  @include font(20, 37, 500, 0.04);
+  @include font(12, 20, 500, 0.04);
+
+  @include mobile {
+    @include font(14, 26, 500, 0.04);
+  }
+
+  @include tablet {
+    margin-bottom: 32px;
+
+    @include font(16, 30, 500, 0.04);
+  }
+
+  @include desktop {
+    @include font(20, 37, 500, 0.04);
+  }
 }
