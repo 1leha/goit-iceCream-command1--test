@@ -2,20 +2,20 @@
   "name": "goit-icecream-command1--test",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/1leha/goit-iceCream-command1--test",
+  "homepage": "https://github.com/1leha/goit-icecream-command1--test",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-iceCream-command1--test/"
+    "build": "parcel build src/*.html --public-url /goit-icecream-command1--test/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1leha/goit-iceCream-command1--test.git"
+    "url": "git+https://github.com/1leha/goit-icecream-command1--test.git"
   },
   "keywords": [],
   "author": "Alexey Lisovoy <alexey.lisovoy2011@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/1leha/goit-iceCream-command1--test.git/issues"
+    "url": "https://github.com/1leha/goit-icecream-command1--test.git/issues"
   },
   "dependencies": {
     "@splidejs/splide": "^4.0.7",
