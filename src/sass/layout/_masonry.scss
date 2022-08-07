@@ -2,19 +2,21 @@
 .wrapper {
   // display: flex;
 
-  position: relative;
-  top: 0px;
-  left: 0px;
-  transform-origin: center center;
-  transform: rotateZ(90deg);
+  // position: relative;
+  // top: 0px;
+  // left: 0px;
+  // transform-origin: center center;
+  // transform: rotateZ(90deg);
+  // min-width: 662px;
+  // height: 280px;
 
   @include tablet {
     // margin: 0 auto;
 
-    position: static;
+    // position: static;
 
-    transform-origin: top left;
-    transform: rotateZ(0deg);
+    // transform-origin: top left;
+    // transform: rotateZ(0deg);
   }
 }
 
@@ -23,10 +25,10 @@
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(12, 0.25fr);
 
-  gap: 4;
+  gap: 2;
   background: #eee;
-  min-width: 662px;
-  height: 280px;
+  max-width: 280px;
+  height: 122px;
   margin: 0 auto;
 
   @include tablet {
@@ -61,18 +63,18 @@
   border-color: hsla(0, 0%, 0%, 0.5);
   border-radius: 5px;
 
-  @include mobile {
-    transform-origin: center center;
-    transform: rotateZ(-90deg);
-  }
-  @include tablet {
-    transform-origin: center center;
-    transform: rotateZ(0deg);
-  }
-  @include desktop {
-    transform-origin: center center;
-    transform: rotateZ(0deg);
-  }
+  // @include mobile {
+  //   transform-origin: center center;
+  //   transform: rotateZ(-90deg);
+  // }
+  // @include tablet {
+  //   transform-origin: center center;
+  //   transform: rotateZ(0deg);
+  // }
+  // @include desktop {
+  //   transform-origin: center center;
+  //   transform: rotateZ(0deg);
+  // }
 }
 
 .grid-item--gigante {
