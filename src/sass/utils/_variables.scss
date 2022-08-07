@@ -4,6 +4,27 @@
   --secondary-font: 'Titan One', cursive;
 
   // color
+  // currentColor for SVG-sprite
+  --current-color: currentColor;
+
+  // content colors
+  --accent-color: #d41443;
+
+  --primary-color: #000000;
+  --secondary-color: #907e82;
+  --third-color: #ffffff;
+  --fourth-color: #ffa5ba;
+
+  // bg-colors
+  --primary-bg-color: #ffb8ca;
+  --secondary-bg-color: #fff5f6;
+  --third-bg-color: #f0d1a5;
+  --fourth-bg-color: #c2e297;
+  --testomonials-bg-color: #fafafa;
+
+  // button-colors
+  --primary-button-color: #d41342;
+  --accent-button-color: #ecebeb;
 
   // transitions
   --transition-time: 0.3s;
