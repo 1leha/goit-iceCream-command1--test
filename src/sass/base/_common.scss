@@ -3,5 +3,8 @@
 
 body {
   font-family: var(--primary-font);
+
   @include font(16, 28, 500, 0.04);
+
+  color: var(--primary-color);
 }
