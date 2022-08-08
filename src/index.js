@@ -1,2 +1,2 @@
-// import './js/customerReviewsSlider';
-import './js/simplelightbox';
+import './js/customerReviewsSlider';
+// import './js/simplelightbox';
