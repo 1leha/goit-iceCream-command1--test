@@ -1,0 +1,37 @@
+.hero {
+  width: 100%;
+  height: 664px;
+  background-color: var(--primary-bg-color);
+  overflow: hidden;
+}
+
+.hero__circle {
+  position: absolute;
+  top: 54px;
+  left: 517px;
+  width: 534px;
+  height: 534px;
+  border-radius: 50%;
+  background-color: var(--fourth-color);
+  transform-origin: 48% 47%;
+
+  animation: rotateRing 10000ms linear 1000ms infinite;
+}
+
+.hero__img {
+  position: absolute;
+  width: 236px;
+  height: 557px;
+  left: 636px;
+  top: 108px;
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}

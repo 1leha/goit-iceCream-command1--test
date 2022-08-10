@@ -1,0 +1,18 @@
+@keyframes play180 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -60300px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 3000ms;
+  animation-timing-function: steps(180);
+  width: 335px;
+  height: 333px;
+  background-repeat: no-repeat;
+}
+.shapeshifter.play {
+  animation-name: play180;
+}
