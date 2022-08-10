@@ -35,3 +35,11 @@
     transform: rotate3d(0, 0, 1, 360deg);
   }
 }
+
+.ico {
+  color: aqua;
+
+  &:hover {
+    color: red;
+  }
+}
